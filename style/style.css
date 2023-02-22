@@ -1,5 +1,24 @@
 body {
     width: 100%;
+    margin: auto;
+    background-color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: #000000;
+}
+
+#container {
+    margin: 44px 50px 0px 50px;
+}
+
+em {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+main, aside {
+    background-color: #F2F2F2;
 }
 
 img {
@@ -12,4 +31,46 @@ li {
 
 a {
     text-decoration: none;
+}
+
+p > button {
+    display: inline;
+    background-color: white;
+    font-weight: 700;
+    font-size: 17px;
+    border: none;
+    padding: 10px;
+}
+
+i > button {
+    padding-right: 10px;
+}
+
+i {
+    color: #0065FC;
+}
+
+#logo {
+    width: 61.09px;
+    height: 19px;
+}
+
+h1, h2 {
+    font-size: 22px;
+}
+
+li {
+    display: flex;
+    justify-content: flex-end;
+    display: inline;
+}
+
+#search {
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: #0065FC;
+    border: none;
+    padding: 14px 16px 14px 16px;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #0065FC;
 }
