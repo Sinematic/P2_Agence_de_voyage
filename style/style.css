@@ -1,0 +1,15 @@
+body {
+    width: 100%;
+}
+
+img {
+    max-width: 30%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
