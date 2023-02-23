@@ -21,7 +21,7 @@ main, aside {
     background-color: #F2F2F2;
 }
 
-img {
+img > section {
     max-width: 30%;
 }
 
@@ -31,6 +31,7 @@ li {
 
 a {
     text-decoration: none;
+    color: #000000;
 }
 
 p > button {
@@ -50,19 +51,13 @@ i {
     color: #0065FC;
 }
 
-#logo {
-    width: 61.09px;
-    height: 19px;
-}
-
 h1, h2 {
     font-size: 22px;
 }
 
-li {
-    display: flex;
-    justify-content: flex-end;
-    display: inline;
+#logo {
+    width: 61.09px;
+    justify-content: flex-start;
 }
 
 #search {
@@ -73,4 +68,50 @@ li {
     padding: 14px 16px 14px 16px;
     border-radius: 0px 15px 15px 0px;
     border: 1px solid #0065FC;
+}
+
+img, nav, figure, ul {
+    display: inline;
+}
+
+header {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+nav {
+    width: 381px;
+    justify-content: space-between;
+}
+
+.nav {
+    width: 40%;
+    display: inline-block;
+    text-align: end;
+
+}
+
+.nav:hover {
+    font-weight: 700;
+    border-bottom: 20px;
+    
+}
+
+figure {
+    margin: 0;
+}
+
+section:first-child {
+    background-color: #FFFFFF;
+    padding-bottom: 39px;
+}
+
+#info > i, #info > p {
+    display: inline;
+}
+
+button {
+    border-bottom: 19px;
+    border-color: #0065FC;;
 }
