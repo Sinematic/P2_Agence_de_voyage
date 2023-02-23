@@ -1,8 +1,9 @@
 body {
-    width: 100%;
+    max-width: 1440px;
     margin: auto;
     background-color: #FFFFFF;
     font-family: 'Raleway', sans-serif;
+    font-weight: 400;
     font-size: 16px;
     color: #000000;
 }
@@ -17,12 +18,8 @@ em {
     font-weight: 700;
 }
 
-main, aside {
+section, aside {
     background-color: #F2F2F2;
-}
-
-img > section {
-    max-width: 30%;
 }
 
 li {
@@ -36,7 +33,7 @@ a {
 
 p > button {
     display: inline;
-    background-color: white;
+    background-color: #FFFFFF;
     font-weight: 700;
     font-size: 17px;
     border: none;
@@ -60,7 +57,7 @@ h1, h2 {
     justify-content: flex-start;
 }
 
-#search {
+#submit {
     font-size: 18px;
     color: #FFFFFF;
     background-color: #0065FC;
@@ -70,9 +67,7 @@ h1, h2 {
     border: 1px solid #0065FC;
 }
 
-img, nav, figure, ul {
-    display: inline;
-}
+
 
 header {
     width: 100%;
@@ -93,25 +88,109 @@ nav {
 }
 
 .nav:hover {
-    font-weight: 700;
-    border-bottom: 20px;
-    
+    font-weight: 700; /* à supprimer ! */
+    border-bottom: 20px;    
 }
 
 figure {
     margin: 0;
 }
 
-section:first-child {
+#info > p {
+    display: inline;
+    padding-left: 11px;
+}
+
+#info > i {
+    padding-left: 9px;
+}
+
+section:not(#search) {
+    border-radius: 20px;
+}
+
+#search {
+    display: block;
     background-color: #FFFFFF;
     padding-bottom: 39px;
+    /*width: 914px;*/
 }
 
-#info > i, #info > p {
-    display: inline;
+#lodgings {
+    border-radius: 20px;
+    width: 880px;
 }
 
-button {
-    border-bottom: 19px;
-    border-color: #0065FC;;
+#lodgings > h2 {
+    padding: 42px 0px 23px 40px;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+    padding: 40px 0px 46px 44px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#lodgings > ol {
+    display: inline-flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+ol {
+    margin: 0px 40px 0px 40px;
+    justify-content: space-between;
+}
+
+.cards {
+    margin: 0;
+    width: 246px;
+    margin-bottom: 30px;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
+}
+
+.cards > a > i:first-of-type {
+    padding: 0px 0px 11px 16px;
+}
+
+.cards > a > p {
+    font-size: 14px;
+    margin: 9px 0px 9px 16px;
+}
+
+.cards > a > p:first-of-type {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.img-cards {
+    width: 236px;
+    height: 124px;
+    border: 5px solid #FFFFFF;
+    border-radius: 20px 20px 0px 0px;
+}
+
+img {
+    max-width: 100%;
+}
+
+#aside {
+    width: 200px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+aside > figure {
+    width: 343px;
+    border-radius: 20px;
+}
+
+main {
+    display: inline-block;
 }
