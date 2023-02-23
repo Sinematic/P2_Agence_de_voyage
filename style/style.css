@@ -1,7 +1,7 @@
 body {
     max-width: 1440px;
     margin: auto;
-    background-color: #FFFFFF;
+    background-color: lightgray;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -9,7 +9,8 @@ body {
 }
 
 #container {
-    margin: 44px 50px 0px 50px;
+    padding: 44px 50px 0px 50px;
+    background-color: #FFFFFF;
 }
 
 em {
@@ -66,8 +67,6 @@ h1, h2 {
     border-radius: 0px 15px 15px 0px;
     border: 1px solid #0065FC;
 }
-
-
 
 header {
     width: 100%;
@@ -193,4 +192,30 @@ aside > figure {
 
 main {
     display: inline-block;
+}
+
+#leisure {
+    width: 1337px;
+    height: 493px;
+    background-color: #FFFFFF;
+}
+
+figcaption {
+    padding: 20px 0px 21px 19px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#leisure > ul > li > img {
+    width: 302px;
+    height: 389px;
+    object-fit: contain;
+}
+
+#leisure > h2 {
+    padding: 60px 0px 18.47px 50px;
+}
+
+main > section {
+    border-left: 50px;
 }
