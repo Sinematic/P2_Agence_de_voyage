@@ -93,12 +93,25 @@ figure {
     padding: 14px 16px 14px 16px;
     border-radius: 0px 15px 15px 0px;
     border: 1px solid #0065FC;
+    margin: 0;
 }
 
 em {
     font-style: normal;
     font-size: 18px;
     font-weight: 700;
+}
+
+input {
+    margin: 0;
+    padding: 14px 0px 14px 17px;
+    border: none;
+    border-top: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+form {
+    font-size: 18px;
 }
 
 section, aside {
