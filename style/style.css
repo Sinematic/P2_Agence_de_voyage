@@ -9,18 +9,8 @@ body {
 }
 
 #container {
-    padding: 44px 50px 0px 50px;
+    padding: 0px 50px 0px 50px;
     background-color: #FFFFFF;
-}
-
-em {
-    font-style: normal;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-section, aside {
-    background-color: #F2F2F2;
 }
 
 li {
@@ -53,9 +43,46 @@ h1, h2 {
     font-size: 22px;
 }
 
-#logo {
+header {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    padding-top: 2px;
+    padding-left: 5px;
+}
+
+header > figure {
     width: 61.09px;
-    justify-content: flex-start;
+    padding-top: 42px;
+}
+
+nav {
+    justify-content: space-between;
+}
+
+nav > ul {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    width: 381px;
+    padding-left: 0px;
+}
+
+.nav {
+    width: 50%;
+    display: inline-block;
+    text-align: end;
+    font-weight: 500;
+    padding: 46px 27px 0px 27px;
+}
+
+.nav:hover {
+    margin-top: -3px;
+    border-top: 3px solid #0065FC;
+}
+
+figure {
+    margin: 0;
 }
 
 #submit {
@@ -68,31 +95,14 @@ h1, h2 {
     border: 1px solid #0065FC;
 }
 
-header {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-between;
+em {
+    font-style: normal;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-nav {
-    width: 381px;
-    justify-content: space-between;
-}
-
-.nav {
-    width: 40%;
-    display: inline-block;
-    text-align: end;
-
-}
-
-.nav:hover {
-    font-weight: 700; /* à supprimer ! */
-    border-bottom: 20px;    
-}
-
-figure {
-    margin: 0;
+section, aside {
+    background-color: #F2F2F2;
 }
 
 #info > p {
@@ -168,6 +178,10 @@ ol {
     margin-top: 4px;
 }
 
+.cards > a > i:last-of-type {
+    color: #F2F2F2;
+}
+
 .img-cards {
     width: 236px;
     height: 124px;
@@ -218,4 +232,47 @@ figcaption {
 
 main > section {
     border-left: 50px;
+}
+
+footer {
+    display: flex;
+    height: auto;
+    background-color: #F2F2F2;
+    margin-top: 60.51px;
+    font-weight: 400;
+    padding-bottom: 58px;
+}
+
+footer > div > p {
+    padding-top: 45px;
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+}
+
+footer > div {
+    display: inline;
+    padding-right: 230px;
+}
+
+footer > div:first-of-type {
+    padding-left: 70px;
+}
+
+footer > div > ul:first-of-type {
+    padding-top: 20px;
+}
+
+footer > div {
+    padding-left: 9px;
+}
+
+footer > div > ul {
+    margin: 0px;
+    padding: 0px;
+    padding-top: 12px;
+}
+
+footer> div > ul > li:not(:first-of-type) {
+    padding-top: 12px;
 }
