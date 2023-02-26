@@ -74,6 +74,10 @@ figure {
     padding-bottom: 39px;
 }
 
+form {
+    margin: 0;
+}
+
 form > div:first-of-type {
     display: inline-flex;
 }
@@ -122,6 +126,10 @@ em {
     padding-top: 32px;
 }
 
+#filters p{
+    margin: 0;
+}
+
 #filters > p > i {
     display: inline;
 }
@@ -147,6 +155,10 @@ em {
 
 #shift {
     padding-left: 14.56px;
+}
+
+#info {
+    padding-top: 38px;
 }
 
 #info > p {
