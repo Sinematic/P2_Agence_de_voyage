@@ -22,23 +22,6 @@ a {
     color: #000000;
 }
 
-p > button {
-    display: inline;
-    background-color: #FFFFFF;
-    font-weight: 700;
-    font-size: 17px;
-    border: none;
-    padding: 10px;
-}
-
-i > button {
-    padding-right: 10px;
-}
-
-i {
-    color: #0065FC;
-}
-
 h1, h2 {
     font-size: 22px;
 }
@@ -85,7 +68,21 @@ figure {
     margin: 0;
 }
 
-#submit {
+#search {
+    display: inline-block;
+    background-color: #FFFFFF;
+    padding-bottom: 39px;
+}
+
+form > div:first-of-type {
+    display: inline-flex;
+}
+
+i {
+    color: #0065FC;
+}
+
+button[type="submit"] {
     font-size: 18px;
     color: #FFFFFF;
     background-color: #0065FC;
@@ -93,34 +90,72 @@ figure {
     padding: 14px 16px 14px 16px;
     border-radius: 0px 15px 15px 0px;
     border: 1px solid #0065FC;
+}
+
+input {
+    margin: 0px 0px 0px 0px;
+    padding: 14px 72px 14px 17px;
+    font-weight: 700;
+    font-size: 18px;
+    border: 2px solid #F2F2F2;
+}
+
+form > div > i:first-of-type {
+    padding: 16px 18px 15px 18px;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    border-radius: 15px 0px 0px 15px;
     margin: 0;
+    color:#000000;
 }
 
 em {
     font-style: normal;
     font-size: 18px;
     font-weight: 700;
+    padding-left: 7px;
+    padding-top: 14px;
+    margin-right: 37px;
 }
 
-input {
-    margin: 0;
-    padding: 14px 0px 14px 17px;
-    border: none;
-    border-top: 1px solid #F2F2F2;
-    border-bottom: 1px solid #F2F2F2;
+#filters {
+    padding-top: 32px;
 }
 
-form {
-    font-size: 18px;
+#filters > p > i {
+    display: inline;
 }
 
-section, aside {
-    background-color: #F2F2F2;
+
+#filters > p > button {
+    background-color: #FFFFFF;
+    font-weight: 700;
+    font-size: 17px;
+    padding: 14px 15px 16px 20px;
+    border: 2px solid #D9D9D9;;
+    border-radius: 30px;
+    margin-right: 46px;
+}
+
+#filters > p > button:hover {
+    background-color: #DEEBFF;
+}
+
+#filters > p > button > span {
+    padding-left: 10px;
+}
+
+#shift {
+    padding-left: 14.56px;
 }
 
 #info > p {
     display: inline;
     padding-left: 11px;
+}
+
+section, aside {
+    background-color: #F2F2F2;
 }
 
 #info > i {
@@ -129,13 +164,6 @@ section, aside {
 
 section:not(#search) {
     border-radius: 20px;
-}
-
-#search {
-    display: block;
-    background-color: #FFFFFF;
-    padding-bottom: 39px;
-    /*width: 914px;*/
 }
 
 #lodgings {
@@ -245,10 +273,6 @@ figcaption {
 
 #leisure > h2 {
     padding: 60px 0px 18.47px 50px;
-}
-
-main > section {
-    border-left: 50px;
 }
 
 footer {
