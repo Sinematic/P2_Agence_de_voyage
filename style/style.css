@@ -176,6 +176,10 @@ ol {
     box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
 }
 
+.cards:hover {
+    box-shadow: rgb(218, 218, 218) 0px 2px 3px 1px, rgb(190, 190, 190) 0px 2px 3px 1px;
+}
+
 .cards > a > i:first-of-type {
     padding: 0px 0px 11px 16px;
 }
