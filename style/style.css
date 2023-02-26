@@ -250,16 +250,21 @@ img {
     max-width: 100%;
 }
 
-#aside {
+aside {
     width: 420px;
     height: 625px;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
 }
 
 aside > figure {
     width: 343px;
     border-radius: 20px;
+}
+
+aside img {
+    width: 137px;
+    height: 144px;
 }
 
 main {
