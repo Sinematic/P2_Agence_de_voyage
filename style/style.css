@@ -259,7 +259,8 @@ ol > li {
     padding: 0px 0px 11px 16px;
 }
 
-.cards > a > p {
+.cards > a > p, .cards > a > span {
+    display: flex;
     margin: 0;
     width: 204px;
 }
@@ -272,10 +273,14 @@ ol > li {
 
 .cards > a > p:last-of-type {
     font-size: 14px;
-    padding: 0px 26px 6px 16px;
+    padding-left: 16px;
 }
 
-.cards > a > i:last-of-type, #popular figure i:last-of-type {
+.cards span {
+    padding: 9px 26px 11px 16px;
+}
+
+.cards > a > span > i:last-of-type, #popular figure i:last-of-type {
     color: #F2F2F2;
 }
 
@@ -283,6 +288,11 @@ ol > li {
     font-size: 12px;
     margin: 0;
 }
+
+.cards p, .cards a {
+    display: inline-block;
+    margin: 0;
+  }
 
 .img-cards {
     width: 236px;
