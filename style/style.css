@@ -120,8 +120,9 @@ button[type="submit"] {
 
 input {
     margin: 0px 0px 0px 0px;
-    padding: 14px 72px 14px 17px;
+    padding: 14px 0px 14px 17px;
     font-weight: 700;
+    width: 236px;
     font-size: 18px;
     border: 2px solid #F2F2F2;
 }
