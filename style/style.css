@@ -216,7 +216,7 @@ ol {
     box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
 }
 
-.cards:hover {
+.cards:hover, aside figure:hover {
     box-shadow: rgb(218, 218, 218) 0px 2px 3px 1px, rgb(190, 190, 190) 0px 2px 3px 1px;
 }
 
@@ -235,7 +235,7 @@ ol {
     margin-top: 4px;
 }
 
-.cards > a > i:last-of-type {
+.cards > a > i:last-of-type, aside figure i:last-of-type {
     color: #F2F2F2;
 }
 
@@ -255,17 +255,37 @@ aside {
     height: 625px;
     display: inline-block;
     flex-direction: column;
+    border-radius: 20px;
 }
 
 aside > figure {
     width: 343px;
+    height: 144px;
+    background-color: #FFFFFF;
+    margin-bottom: 33px;
     border-radius: 20px;
+    box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
 }
 
 aside img {
     width: 137px;
     height: 144px;
+    border: 1px solid #FFFFFF;
+    border-radius: 20px 0px 0px 20px;
 }
+
+aside h3 {
+    margin: 0;
+    padding: 16px 22px 7px 15px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+aside figure {
+    display: inline-flex;
+}
+
+
 
 main {
     display: inline-block;
@@ -277,7 +297,7 @@ main {
     background-color: #FFFFFF;
 }
 
-figcaption {
+#leisure > ul > li > figure > figcaption {
     padding: 20px 0px 21px 19px;
     font-size: 16px;
     font-weight: 700;
