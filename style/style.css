@@ -1,18 +1,24 @@
 body {
     max-width: 1440px;
     margin: auto;
-    background-color: lightgray;
+    background-color: var(--secondary-color);
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #000000;
+    color: var(--text-color);
 }
+:root {
+    --main-color: #FFFFFF;
+    --secondary-color: #F2F2F2;
+    --alt-color: #0065FC;
+    --text-color: #000000;
+  }  
 
 #container {
     padding: 0px 50px 0px 50px;
     box-sizing: border-box;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
 }
 
 main {
@@ -25,15 +31,12 @@ main {
 }
 
 #leisure {
-    order: 3;   
-    margin-bottom: 60.51px;
+    order: 3;
 }
 
 #popular {
     order: 1;
 }
-
-
 
 li {
     list-style: none;
@@ -41,7 +44,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #000000;
+    color: var(--text-color);
 }
 
 h1, h2 {
@@ -84,7 +87,7 @@ nav > ul {
 
 .nav:hover {
     margin-top: -3px;
-    border-top: 3px solid #0065FC;
+    border-top: 3px solid var(--alt-color);
 }
 
 figure {
@@ -93,7 +96,7 @@ figure {
 
 #search {
     display: inline-block;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
 }
 
 form {
@@ -105,17 +108,17 @@ form > div:first-of-type {
 }
 
 i {
-    color: #0065FC;
+    color: var(--alt-color);
 }
 
 button[type="submit"] {
     font-size: 18px;
-    color: #FFFFFF;
-    background-color: #0065FC;
+    color: var(--main-color);
+    background-color: var(--alt-color);
     border: none;
     padding: 14px 16px 14px 16px;
     border-radius: 0px 15px 15px 0px;
-    border: 1px solid #0065FC;
+    border: 1px solid var(--alt-color);
 }
 
 input {
@@ -124,16 +127,16 @@ input {
     font-weight: 700;
     width: 236px;
     font-size: 18px;
-    border: 2px solid #F2F2F2;
+    border: 2px solid var(--secondary-color);
 }
 
 form > div > i:first-of-type {
     padding: 16px 18px 15px 18px;
-    background-color: #F2F2F2;
-    border: 1px solid #F2F2F2;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 15px 0px 0px 15px;
     margin: 0;
-    color:#000000;
+    color: var(--text-color);
 }
 
 em {
@@ -159,7 +162,7 @@ em {
 
 
 #filters > p > button {
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
     font-weight: 700;
     font-size: 17px;
     padding: 14px 15px 16px 20px;
@@ -191,7 +194,7 @@ em {
 
 #info > i {
     /*font-family: 'Raleway', 'serif';*/
-    color:#0065FC;
+    color: var(--alt-color);
     padding: 7px 10px 7px 10px;
     border: 1px solid #D9D9D9;;
     border-radius: 20px;
@@ -199,7 +202,7 @@ em {
 }
 
 section {
-    background-color: #F2F2F2;
+    background-color: var(--secondary-color);
 }
 
 section:not(#search) {
@@ -246,7 +249,7 @@ ol > li {
     width: 246px;
     /*height: 199px;*/
     display: flex;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
     border-radius: 20px;
     margin: 0;
     box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
@@ -282,7 +285,7 @@ ol > li {
 }
 
 .cards > a > span > i:last-of-type, #popular figure i:last-of-type {
-    color: #F2F2F2;
+    color: var(--secondary-color);
 }
 
 .cards i {
@@ -298,7 +301,7 @@ ol > li {
 .img-cards {
     width: 236px;
     height: 114px;
-    border: 5px solid #FFFFFF;
+    border: 5px solid var(--main-color);
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -311,13 +314,13 @@ img {
     height: 625px;
     border-radius: 20px;
     display: inline-block;
-    background-color: #F2F2F2;
+    background-color: var(--secondary-color);
 }
 
 #popular figure {
     width: 343px;
     height: 144px;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
     margin-left: 37px;
     border-radius: 20px;
     box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
@@ -326,7 +329,7 @@ img {
 #popular img {
     width: 137px;
     height: 134px;
-    border: 5px solid #FFFFFF;
+    border: 5px solid var(--main-color);
     border-radius: 20px 0px 0px 20px;
 }
 
@@ -380,7 +383,8 @@ img {
 #leisure {
     width: 1337px;
     height: 493px;
-    background-color: #FFFFFF;
+    background-color: var(--main-color);
+    margin-bottom: 60.51px;
 }
 
 #leisure > ul > li > figure > figcaption {
@@ -422,7 +426,7 @@ img {
 footer {
     display: flex;
     height: auto;
-    background-color: #F2F2F2;
+    background-color: var(--secondary-color);
     margin-top: 60.51px;
     font-weight: 400;
     padding-bottom: 58px;
