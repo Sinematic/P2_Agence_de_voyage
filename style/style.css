@@ -1,3 +1,10 @@
+:root {
+    --main-color: #FFFFFF;
+    --secondary-color: #F2F2F2;
+    --alt-color: #0065FC;
+    --text-color: #000000;
+}  
+
 body {
     max-width: 1440px;
     margin: auto;
@@ -7,12 +14,6 @@ body {
     font-size: 16px;
     color: var(--text-color);
 }
-:root {
-    --main-color: #FFFFFF;
-    --secondary-color: #F2F2F2;
-    --alt-color: #0065FC;
-    --text-color: #000000;
-  }  
 
 #container {
     padding: 0px 50px 0px 50px;
