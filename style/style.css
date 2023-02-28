@@ -2,6 +2,7 @@
     --main-color: #FFFFFF;
     --secondary-color: #F2F2F2;
     --alt-color: #0065FC;
+    --alt-secondary-color: #DEEBFF;
     --text-color: #000000;
 }  
 
@@ -173,7 +174,7 @@ em {
 }
 
 #filters > p > button:hover {
-    background-color: #DEEBFF;
+    background-color: var(--alt-secondary-color);
 }
 
 #filters > p > button > span {
