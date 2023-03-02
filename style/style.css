@@ -1,4 +1,6 @@
-:root {
+/* Les styles globaux de la maquette */
+
+:root { /* Les couleurs présente sont réutilisées via des variables */
     --main-color: #FFFFFF;
     --secondary-color: #F2F2F2;
     --alt-color: #0065FC;
@@ -23,30 +25,52 @@ body {
     background-color: var(--main-color);
 }
 
+/* Des classes communes à certains éléments de la page */
 .rounded {
     border-radius: 20px;
 }
 
-.name-section {
-    margin: 0;}
+.shadow {
+    box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
+}
 
-main {
+.shadow:hover {
+    box-shadow: rgb(218, 218, 218) 0px 2px 3px 1px, rgb(190, 190, 190) 0px 2px 3px 1px;
+    transition: 0.5s;
+}
+
+.cards {
+    background-color: var(--main-color);
+}
+
+.title-cards {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
     display: flex;
-    flex-wrap: wrap;
 }
 
-#search {
-    width: 100%;
+.price-cards {
+    font-size: 14px;
+    margin: 0;
 }
 
-#leisure {
-    order: 3;
+.name-section {
+    display: inline-flex;
+    margin: 0;
 }
 
-#popular {
-    order: 1;
+.rank {
+    display: inline-flex;
+    margin: 0;
+    font-size: 12px;
 }
 
+.rank > i:last-of-type {
+    color: var(--secondary-color);
+}
+
+ /* On retire les styles par défaut de certains éléments */
 li {
     list-style: none;
 }
@@ -56,8 +80,16 @@ a {
     color: var(--text-color);
 }
 
+i {
+    color: var(--alt-color);
+}
+
+/* HEADER */
+
 h1, h2 {
+    margin: 0;
     font-size: 22px;
+    font-weight: 700;
 }
 
 header {
@@ -68,9 +100,13 @@ header {
     padding-left: 5px;
 }
 
-header > figure {
+#logo  {
     width: 61.09px;
     padding-top: 42px;
+}
+
+img {
+    max-width: 100%;
 }
 
 nav {
@@ -99,25 +135,21 @@ nav {
     border-top: 3px solid var(--alt-color);
 }
 
-figure {
-    margin: 0;
-}
+/* SECTION #SEARCH */
 
 #search {
     display: inline-block;
+    width: 100%;
     background-color: var(--main-color);
+    padding-left: 5px;
 }
 
-form {
+figure, form {
     margin: 0;
 }
 
 #input {
     display: inline-flex;
-}
-
-i {
-    color: var(--alt-color);
 }
 
 button[type="submit"] {
@@ -131,7 +163,7 @@ button[type="submit"] {
 }
 
 #input > input {
-    margin: 0px 0px 0px 0px;
+    margin: 0;
     padding: 14px 0px 14px 17px;
     font-weight: 700;
     width: 236px;
@@ -139,7 +171,7 @@ button[type="submit"] {
     border: 2px solid var(--secondary-color);
 }
 
-#black-i {
+#ping {
     padding: 16px 18px 15px 18px;
     background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
@@ -152,7 +184,7 @@ button[type="submit"] {
     font-style: normal;
     font-size: 18px;
     font-weight: 700;
-    padding-top: 14px;
+    padding: 14px 0px 0px 7px;
     margin-right: 37px;
 }
 
@@ -160,7 +192,7 @@ button[type="submit"] {
     padding-top: 32px;
 }
 
-#filters p{
+#filters p {
     margin: 0;
     padding-left: 12px;
 }
@@ -168,7 +200,6 @@ button[type="submit"] {
 #filters > p > i {
     display: inline;
 }
-
 
 .button-filter {
     background-color: var(--main-color);
@@ -207,20 +238,21 @@ button[type="submit"] {
     border: 1px solid #D9D9D9;
 }
 
+/* SECTION #LODGINGS */
+
 #lodgings, #popular {
     background-color: var(--secondary-color);
+    display: inline-block;
 }
 
 #lodgings {
     width: 880px;
     height: 626px;
-    order: 1;
     margin-right: 40px;
 }
 
-#lodgings > h2 {
+#lodgings .name-section {
     padding: 42px 0px 23px 40px;
-    margin: 0;
 }
 
 #more {
@@ -238,40 +270,22 @@ button[type="submit"] {
     justify-content: space-between;
 }
 
-ol > li {
+#lodgings li {
     padding-bottom: 30px;
 }
 
 #lodgings .cards {
     width: 246px;
-    /*height: 199px;*/
     display: flex;
     margin: 0;
 }
 
-.shadow {
-    box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
-}
-
-.shadow:hover {
-    box-shadow: rgb(218, 218, 218) 0px 2px 3px 1px, rgb(190, 190, 190) 0px 2px 3px 1px;
-    transition: 0.5s;
-}
-
-.cards {
-    background-color: var(--main-color);
-}
-
-.title-cards, .price-cards, #lodgings .rank {
-    display: flex;
-    margin: 0;
+#lodgings figcaption {
     width: 204px;
 }
 
-.title-cards {
+#lodgings .title-cards {
     padding: 4px 26px 9px 16px;
-    font-size: 16px;
-    font-weight: 700;
 }
 
 #lodgings .price-cards {
@@ -282,16 +296,6 @@ ol > li {
     padding: 9px 26px 11px 16px;
 }
 
-.cards i {
-    font-size: 12px;
-    margin: 0;
-}
-
-.cards p, .cards a {
-    display: inline-block;
-    margin: 0;
-  }
-
 .img-cards {
     width: 236px;
     height: 114px;
@@ -299,27 +303,18 @@ ol > li {
     border-radius: 20px 20px 0px 0px;
 }
 
-.price-cards {
-    font-size: 14px;
-}
-
-img {
-    max-width: 100%;
-}
-
-.rank {
-    font-size: 12px;
-}
-
-.rank > i:last-of-type {
-    color: var(--secondary-color);
-}
+/* SECTION #POPULAR */
 
 #popular {
     width: 420px;
     height: 625px;
     display: inline-block;
-    background-color: var(--secondary-color);
+}
+
+#sub {
+    padding: 41px 42px 26px 37px;
+    display: flex;
+    justify-content: space-between;
 }
 
 #popular figure {
@@ -336,25 +331,9 @@ img {
     border-radius: 20px 0px 0px 20px;
 }
 
-#popular > h2 {
-    padding: 41px 118px 26px 37px;
-    display: inline-flex;
-}
-
-#popular > i {
-    display: inline-flex;
-}
-
-#popular {
-    display: inline-block;
-}
-
-#popular h3 {
-    margin: 0;
+#popular .title-cards {
     padding: 0px;
     width: 169px;
-    font-size: 16px;
-    font-weight: 700;
 }
 
 #popular figure {
@@ -362,25 +341,19 @@ img {
     margin-bottom: 33px;
 }
 
-#popular > figure > figcaption {
+#popular figcaption {
     padding: 16px 0px 0px 15px;
-    margin: 0;
 }
 
-#popular > figure > figcaption > p {
+#popular .price-cards {
     padding: 7px 22px 32px 0px;
-    display: flex;
-    margin: 0;
 }
 
-#popular > figure > figcaption > i {
-    margin: 0;
-    display: inline-block;
-}
-
-#popular > figure:last-of-type > figcaption > .price-cards {
+#popular > figure:last-of-type .price-cards {
     padding-bottom: 51px;
 }
+
+/* SECTION #LEISURE */
 
 #leisure {
     width: 1337px;
@@ -389,15 +362,12 @@ img {
     margin-bottom: 60.51px;
 }
 
-#leisure > ul > li > figure > figcaption {
+#leisure .title-cards {
     padding: 20px 0px 21px 19px;
-    font-size: 16px;
-    font-weight: 700;
 }
 
-#leisure > h2 {
+#leisure .name-section {
     padding: 60px 0px 18.47px;
-    margin: 0;
 }
 
 #leisure > ul {
@@ -419,10 +389,7 @@ img {
     margin-bottom: 61px;
 }
 
-#leisure li:hover {
-    box-shadow: rgb(218, 218, 218) 0px 2px 3px 1px, rgb(190, 190, 190) 0px 2px 3px 1px;
-    transition: 0.6s;
-}
+/* FOOTER */
 
 footer {
     display: flex;
@@ -433,42 +400,54 @@ footer {
     padding-bottom: 58px;
 }
 
-footer > div > p {
-    padding-top: 45px;
+.category:first-of-type {
+    padding-left: 70px;
+}
+
+.category {
+    display: inline;
+    padding: 45px 230px 0px 0px;
+}
+
+.category:last-of-type {
+    padding-left: 9px;
+}
+
+.name-category {
+    padding: 0px 0px 8px 0px;
     font-weight: 700;
     font-size: 18px;
     margin: 0;
 }
 
-footer > div {
-    display: inline;
-    padding-right: 230px;
-}
 
-footer > div:first-of-type {
-    padding-left: 70px;
-}
-
-footer > div > ul:first-of-type {
-    padding-top: 20px;
-}
-
-footer > div {
-    padding-left: 9px;
-}
-
-footer > div > ul {
+footer ul {
     margin: 0px;
     padding: 0px;
+}
+
+.category li {
     padding-top: 12px;
 }
 
-footer> div > ul > li:not(:first-of-type) {
-    padding-top: 12px;
+
+/* L'organisation de l'affichage du contenu pour le Desktop */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-/*
+#lodgings {
+    order: 1;
+}
 
-Pour la version Desktop, toute l'attention a été portée afin de respecter les dimensions exactes
+#leisure {
+    order: 3;
+}
 
-*/
+#popular {
+    order: 1;
+}
+
+/* RESPONSIVE */
