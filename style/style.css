@@ -23,6 +23,13 @@ body {
     background-color: var(--main-color);
 }
 
+.rounded {
+    border-radius: 20px;
+}
+
+.name-section {
+    margin: 0;}
+
 main {
     display: flex;
     flex-wrap: wrap;
@@ -71,7 +78,7 @@ nav {
     justify-content: space-between;
 }
 
-nav > ul {
+#nav-ul {
     margin-top: auto;
     display: flex;
     justify-content: flex-end;
@@ -105,7 +112,7 @@ form {
     margin: 0;
 }
 
-form > div:first-of-type {
+#input {
     display: inline-flex;
 }
 
@@ -123,7 +130,7 @@ button[type="submit"] {
     border: 1px solid var(--alt-color);
 }
 
-input {
+#input > input {
     margin: 0px 0px 0px 0px;
     padding: 14px 0px 14px 17px;
     font-weight: 700;
@@ -132,7 +139,7 @@ input {
     border: 2px solid var(--secondary-color);
 }
 
-form > div > i:first-of-type {
+#black-i {
     padding: 16px 18px 15px 18px;
     background-color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
@@ -141,7 +148,7 @@ form > div > i:first-of-type {
     color: var(--text-color);
 }
 
-em {
+#filters em {
     font-style: normal;
     font-size: 18px;
     font-weight: 700;
@@ -163,7 +170,7 @@ em {
 }
 
 
-#filters > p > button {
+.button-filter {
     background-color: var(--main-color);
     font-weight: 700;
     font-size: 17px;
@@ -173,11 +180,11 @@ em {
     margin-right: 46px;
 }
 
-#filters > p > button:hover {
+.button-filter:hover {
     background-color: var(--alt-secondary-color);
 }
 
-#filters > p > button > span {
+.name-filter {
     padding-left: 10px;
 }
 
@@ -195,23 +202,16 @@ em {
 }
 
 #info > i {
-    /*font-family: 'Raleway', 'serif';*/
     color: var(--alt-color);
     padding: 7px 10px 7px 10px;
-    border: 1px solid #D9D9D9;;
-    border-radius: 20px;
+    border: 1px solid #D9D9D9;
 }
 
-section {
+#lodgings, #popular {
     background-color: var(--secondary-color);
 }
 
-section:not(#search) {
-    border-radius: 20px;
-}
-
 #lodgings {
-    border-radius: 20px;
     width: 880px;
     height: 626px;
     order: 1;
@@ -233,9 +233,6 @@ section:not(#search) {
 #lodgings > ol {
     display: inline-flex;
     flex-wrap: wrap;
-}
-
-ol {
     padding: 0px;
     margin: 0px 40px 0px 40px;
     justify-content: space-between;
@@ -245,26 +242,27 @@ ol > li {
     padding-bottom: 30px;
 }
 
-.cards {
+#lodgings .cards {
     width: 246px;
     /*height: 199px;*/
     display: flex;
-    background-color: var(--main-color);
-    border-radius: 20px;
     margin: 0;
+}
+
+.shadow {
     box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
 }
 
-.cards:hover, #popular figure:hover {
+.shadow:hover {
     box-shadow: rgb(218, 218, 218) 0px 2px 3px 1px, rgb(190, 190, 190) 0px 2px 3px 1px;
     transition: 0.5s;
 }
 
-.cards > a > i:first-of-type {
-    padding: 0px 0px 11px 16px;
+.cards {
+    background-color: var(--main-color);
 }
 
-.title-cards, .cards > a > p, .cards > a > span {
+.title-cards, .price-cards, #lodgings .rank {
     display: flex;
     margin: 0;
     width: 204px;
@@ -276,17 +274,12 @@ ol > li {
     font-weight: 700;
 }
 
-.cards > a > p {
-    font-size: 14px;
+#lodgings .price-cards {
     padding-left: 16px;
 }
 
-.cards span {
+#lodgings .rank {
     padding: 9px 26px 11px 16px;
-}
-
-.cards > a > span > i:last-of-type, #popular figure i:last-of-type {
-    color: var(--secondary-color);
 }
 
 .cards i {
@@ -306,14 +299,25 @@ ol > li {
     border-radius: 20px 20px 0px 0px;
 }
 
+.price-cards {
+    font-size: 14px;
+}
+
 img {
     max-width: 100%;
+}
+
+.rank {
+    font-size: 12px;
+}
+
+.rank > i:last-of-type {
+    color: var(--secondary-color);
 }
 
 #popular {
     width: 420px;
     height: 625px;
-    border-radius: 20px;
     display: inline-block;
     background-color: var(--secondary-color);
 }
@@ -323,8 +327,6 @@ img {
     height: 144px;
     background-color: var(--main-color);
     margin-left: 37px;
-    border-radius: 20px;
-    box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
 }
 
 #popular img {
@@ -336,7 +338,6 @@ img {
 
 #popular > h2 {
     padding: 41px 118px 26px 37px;
-    margin: 0;
     display: inline-flex;
 }
 
@@ -377,7 +378,7 @@ img {
     display: inline-block;
 }
 
-#popular > figure:last-of-type > figcaption > p {
+#popular > figure:last-of-type > figcaption > .price-cards {
     padding-bottom: 51px;
 }
 
@@ -415,8 +416,6 @@ img {
 
 #leisure li {
     width: 302px;
-    box-shadow: rgb(220, 220, 220) 0px 2px 3px 1px, rgb(255, 255, 255) 0px 2px 3px 1px;
-    border-radius: 20px;
     margin-bottom: 61px;
 }
 
