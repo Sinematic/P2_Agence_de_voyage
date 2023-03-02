@@ -66,7 +66,7 @@ body {
     font-size: 12px;
 }
 
-.rank > i:last-of-type {
+.rank i:last-of-type {
     color: var(--secondary-color);
 }
 
@@ -82,6 +82,10 @@ a {
 
 i {
     color: var(--alt-color);
+}
+
+figure, form {
+    margin: 0;
 }
 
 /* HEADER */
@@ -144,10 +148,6 @@ nav {
     padding-left: 5px;
 }
 
-figure, form {
-    margin: 0;
-}
-
 #input {
     display: inline-flex;
 }
@@ -162,7 +162,7 @@ button[type="submit"] {
     border: 1px solid var(--alt-color);
 }
 
-#input > input {
+#input input {
     margin: 0;
     padding: 14px 0px 14px 17px;
     font-weight: 700;
@@ -197,10 +197,6 @@ button[type="submit"] {
     padding-left: 12px;
 }
 
-#filters > p > i {
-    display: inline;
-}
-
 .button-filter {
     background-color: var(--main-color);
     font-weight: 700;
@@ -227,13 +223,12 @@ button[type="submit"] {
     padding: 38px 0px 39px 9px;
 }
 
-#info > p {
+#info p {
     display: inline;
     padding-left: 11px;
 }
 
-#info > i {
-    color: var(--alt-color);
+#info i {
     padding: 7px 10px 7px 10px;
     border: 1px solid #D9D9D9;
 }
@@ -262,7 +257,7 @@ button[type="submit"] {
     font-weight: 700;
 }
 
-#lodgings > ol {
+#lodgings ol {
     display: inline-flex;
     flex-wrap: wrap;
     padding: 0px;
@@ -349,7 +344,7 @@ button[type="submit"] {
     padding: 7px 22px 32px 0px;
 }
 
-#popular > figure:last-of-type .price-cards {
+#popular figure:last-of-type .price-cards {
     padding-bottom: 51px;
 }
 
@@ -370,7 +365,7 @@ button[type="submit"] {
     padding: 60px 0px 18.47px;
 }
 
-#leisure > ul {
+#leisure ul {
     padding: 0;
     margin: 0;
     width: 1337px;
