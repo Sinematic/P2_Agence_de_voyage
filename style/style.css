@@ -111,7 +111,7 @@ header {
 
 img {
     max-width: 100%;
-}
+}*/
 
 nav {
     height: auto;
@@ -236,6 +236,7 @@ button[type="submit"] {
 }
 
 #info i {
+    font-size: 10px;
     padding: 7px 10px 7px 10px;
     border: 1px solid #D9D9D9;
 }
@@ -248,46 +249,40 @@ button[type="submit"] {
 }
 
 #lodgings {
-    width: 880px;
-    height: 626px;
+    max-width: 880px;
+    max-height: 626px;
     margin-right: 40px;
+    box-sizing: border-box;
+    padding: 42px 40px 46px 40px;
 }
 
 #lodgings .name-section {
-    padding: 42px 0px 23px 40px;
+    padding-bottom: 23px;
 }
 
 #more {
     margin: 0;
-    padding: 10px 0px 46px 44px;
+    padding-top: 40px;
     font-size: 18px;
     font-weight: 700;
 }
 
 #lodgings ol {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 31px;
+    row-gap: 30px;
     padding: 0px;
-    margin: 0px 40px 0px 40px;
-    justify-content: space-between;
-}
-
-#lodgings li {
-    padding-bottom: 30px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 #lodgings .cards {
-    width: 246px;
-    display: flex;
-    margin: 0;
-}
-
-#lodgings figcaption {
-    width: 204px;
+    height: fit-content;
 }
 
 #lodgings .title-cards {
-    padding: 4px 26px 9px 16px;
+    padding: 0px 0px 6px 16px;
 }
 
 #lodgings .price-cards {
@@ -298,9 +293,10 @@ button[type="submit"] {
     padding: 9px 26px 11px 16px;
 }
 
-.img-cards {
-    width: 236px;
-    height: 114px;
+#lodgings .img-cards {
+    box-sizing: border-box;
+    max-width: 100%;
+    aspect-ratio: 123 / 62;
     border: 5px solid var(--main-color);
     border-radius: 20px 20px 0px 0px;
 }
@@ -353,6 +349,13 @@ button[type="submit"] {
 
 #popular figure:last-of-type .price-cards {
     padding-bottom: 51px;
+}
+
+#popular .img-cards {
+    width: 127px;
+    height: 134px;
+    border: 5px solid var(--main-color);
+    border-radius: 20px 20px 0px 0px;
 }
 
 /* SECTION #LEISURE */
@@ -503,10 +506,6 @@ main {
         padding-top: 13px;
     }
 
-    #input {
-        font-size: 18px;
-    }
-
     #input input {
         padding-left: 16px;
     }
@@ -523,24 +522,11 @@ main {
     }
 
     .button-filter {
-        background-color: var(--main-color);
-        margin-right: 0px;
-    }
-
-    .button-filter:hover {
-        background-color: var(--alt-secondary-color);
-    }
-
-    .name-filter {
-        padding-left: 10px;
-    }
-
-    #shift {
-        padding-left: 14.56px;
+        margin-right: 0;
     }
 
     #info {
-        padding: 38px 0px 39px 9px;
+        padding-left: 0px;
     }
 
     #info p {
@@ -548,11 +534,57 @@ main {
         padding-left: 11px;
     }
 
-    #info i {
-        padding: 7px 10px 7px 10px;
-        border: 1px solid #D9D9D9;
+    /* RESPONSIVE #LODGINGS TABLETTE */
+
+    #lodgings {
+        width: 880px;
+        height: 626px;
+        margin: 0;
     }
 
+    #more {
+        margin: 0;
+        padding: 10px 0px 46px 44px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    #lodgings ol {
+        display: inline-flex;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 0;
+        justify-content: space-between;
+    }
+
+    #lodgings .cards {
+        width: 246px;
+        display: flex;
+        margin: 0;
+    }
+
+    #lodgings figcaption {
+        width: 204px;
+    }
+
+    #lodgings .title-cards {
+        padding: 4px 26px 9px 16px;
+    }
+
+    #lodgings .price-cards {
+        padding-left: 16px;
+    }
+
+    #lodgings .rank {
+        padding: 9px 26px 11px 16px;
+    }
+
+    .img-cards {
+        width: 236px;
+        height: 114px;
+        border: 5px solid var(--main-color);
+        border-radius: 20px 20px 0px 0px;
+    }
 
 
 }
