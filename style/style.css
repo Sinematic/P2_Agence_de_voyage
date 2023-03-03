@@ -97,11 +97,11 @@ h1, h2 {
 }
 
 header {
+    box-sizing: border-box;
     width: 100%;
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    padding-top: 2px;
-    padding-left: 5px;
+    padding: 2px 0px 43px 5px;
 }
 
 #logo  {
@@ -128,6 +128,7 @@ nav {
 
 .nav {
     width: 50%;
+    margin: 0;
     display: inline-block;
     text-align: end;
     font-weight: 500;
@@ -148,12 +149,18 @@ nav {
     padding-left: 5px;
 }
 
+#p-title {
+    margin: 0;
+    padding: 8px 0px 20px 0px;
+}
+
 #input {
     display: inline-flex;
 }
 
 button[type="submit"] {
     font-size: 18px;
+    font-weight: 700;
     color: var(--main-color);
     background-color: var(--alt-color);
     border: none;
@@ -202,7 +209,7 @@ button[type="submit"] {
     font-weight: 700;
     font-size: 17px;
     padding: 14px 15px 16px 20px;
-    border: 2px solid #D9D9D9;;
+    border: 2px solid #D9D9D9;
     border-radius: 30px;
     margin-right: 46px;
 }
@@ -460,27 +467,92 @@ main {
         box-sizing: border-box;
     }
 
+    /*RESPONSIVE HEADER TABLETTE */
+
     header {
         width: auto;
-        display: flex;
-        justify-content: space-between;
+        padding: 0px 0px 43px 0px;
     }
 
     #logo  {
         max-width: 61.09px;
+        padding-top: 44px;
     }
 
     #nav-ul {
         max-width: 243px;
-        padding-left: 0px;
     }
 
     .nav {
         width: 50%;
-        text-align: end;
-        font-weight: 500;
-        margin: 0;
         padding: 48px 0px 0px 0px;
     }
+
+
+    /* RESPONSIVE #SEARCH TABLETTE*/
+
+    #search, #filters em, #filters p {
+        padding: 0px 0px 0px 0px;
+    }
+
+    #filters {
+        padding-right: 34px;
+    }
+
+    #p-title {
+        padding-top: 13px;
+    }
+
+    #input {
+        font-size: 18px;
+    }
+
+    #input input {
+        padding-left: 16px;
+    }
+
+    #filters em {
+        margin: 0;
+    }
+
+    #filters p {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .button-filter {
+        background-color: var(--main-color);
+        margin-right: 0px;
+    }
+
+    .button-filter:hover {
+        background-color: var(--alt-secondary-color);
+    }
+
+    .name-filter {
+        padding-left: 10px;
+    }
+
+    #shift {
+        padding-left: 14.56px;
+    }
+
+    #info {
+        padding: 38px 0px 39px 9px;
+    }
+
+    #info p {
+        display: inline;
+        padding-left: 11px;
+    }
+
+    #info i {
+        padding: 7px 10px 7px 10px;
+        border: 1px solid #D9D9D9;
+    }
+
+
 
 }
