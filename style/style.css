@@ -104,8 +104,8 @@ header {
     padding: 2px 0px 43px 5px;
 }
 
-#logo  {
-    width: 61.09px;
+#logo {
+    max-width: 61.09px;
     padding-top: 42px;
 }
 
@@ -355,8 +355,8 @@ button[type="submit"] {
 /* SECTION #LEISURE */
 
 #leisure {
-    width: 1337px;
-    height: 493px;
+    max-width: 1337px;
+    max-height: 493px;
     background-color: var(--main-color);
     margin-bottom: 60.51px;
 }
@@ -372,10 +372,13 @@ button[type="submit"] {
 #leisure ul {
     padding: 0;
     margin: 0;
-    width: 1337px;
-    display: flex;
-    justify-content: space-between;
+    max-width: 1337px;
+    max-height: 445px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 43px;
 }
+
 
 #leisure img {
     width: 302px;
@@ -384,28 +387,23 @@ button[type="submit"] {
 }
 
 #leisure li {
+    margin: 0;
     width: 302px;
-    margin-bottom: 61px;
 }
 
 /* FOOTER */
 
 footer {
-    display: flex;
-    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 230px;
     background-color: var(--secondary-color);
-    margin-top: 60.51px;
     font-weight: 400;
-    padding-bottom: 58px;
-}
-
-.category:first-of-type {
-    padding-left: 70px;
+    padding: 45px 0px 58px 70px;
 }
 
 .category {
     display: inline;
-    padding: 45px 230px 0px 0px;
 }
 
 .category:last-of-type {
@@ -413,16 +411,15 @@ footer {
 }
 
 .name-category {
-    padding: 0px 0px 8px 0px;
+    padding-bottom: 8px;
     font-weight: 700;
     font-size: 18px;
     margin: 0;
 }
 
-
 footer ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .category li {
@@ -433,6 +430,7 @@ footer ul {
 /* L'organisation de l'affichage du contenu pour le Desktop */
 
 main {
+    padding-bottom: 61px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -449,6 +447,7 @@ main {
     order: 1;
 }
 
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 1024px) {
@@ -464,6 +463,11 @@ main {
         box-sizing: border-box;
     }
 
+    main {
+        padding-bottom: 69px;
+    }
+
+
     /*RESPONSIVE HEADER TABLETTE */
 
     header {
@@ -472,7 +476,6 @@ main {
     }
 
     #logo  {
-        max-width: 61.09px;
         padding-top: 44px;
     }
 
@@ -489,7 +492,7 @@ main {
     /* RESPONSIVE #SEARCH TABLETTE*/
 
     #search, #filters em, #filters p {
-        padding: 0px 0px 0px 0px;
+        padding: 0;
     }
 
     #filters {
@@ -528,6 +531,7 @@ main {
         padding-left: 11px;
     }
 
+
     /* RESPONSIVE #LODGINGS TABLETTE */
 
     #lodgings {
@@ -553,6 +557,7 @@ main {
         padding: 0px 26px 9px 16px;
     }
 
+
     /* RESPONSIVE #POPULAR TABLETTE */
 
     #popular {
@@ -577,6 +582,10 @@ main {
         font-size: 13px;
     }
 
+    #popular-cards .title-cards {
+        padding-right: 21px;
+    }
+
     #popular figure {
         max-width: 252px;
     }
@@ -588,6 +597,57 @@ main {
 
     #popular-cards figcaption {
         padding: 12px 4px 12px 10px;
+    }
+
+
+    /* RESPONSIVE #LEISURE TABLETTE */
+
+    #leisure ul {
+        margin: 0;
+        padding: 0px 1px 0px 1px;
+        max-width: 878px;
+        max-height: 267px;
+        column-gap: 50px;
+    }
+
+    #leisure .title-cards {
+        padding: 20px 0px 21px 19px;
+    }
+
+    #leisure .name-section {
+        padding: 0px 0px 34px 9px;
+    }
+
+    #leisure img {
+        max-width: 182px;
+        max-height: 211px;
+        aspect-ratio: 182 / 211;
+    }
+
+    #leisure li {
+        max-width: 182px;
+        max-height: 267px;
+    }
+
+
+    /* RESPONSIVE FOOTER TABLETTE */
+
+    footer {
+        max-width: 880px;
+        column-gap: 82px;
+    }
+
+    .category:first-of-type {
+        padding: 0;
+    }
+
+    .category:last-of-type {
+        padding-left: 0px;
+    }
+
+    .category li {
+        width: auto;
+        padding-top: 12px;
     }
 
 }
