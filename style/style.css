@@ -285,7 +285,7 @@ button[type="submit"] {
 }
 
 #lodgings .title-cards {
-    padding: 0px 0px 6px 16px;
+    padding: 4px 0px 6px 16px;
 }
 
 #lodgings .price-cards {
@@ -303,6 +303,7 @@ button[type="submit"] {
     aspect-ratio: 123 / 62;
     border: 5px solid var(--main-color);
     border-radius: 20px 20px 0px 0px;
+    margin-bottom: -5px;
 }
 
 
@@ -341,16 +342,13 @@ button[type="submit"] {
 }
 
 #popular-cards figcaption {
+    position: relative;
     max-width: 169px;
     padding: 16px 22px 12px 15px;
 }
 
 #popular-cards .price-cards {
-    padding: 7px 0px 40px 0px;
-}
-
-#popular-cards figure:last-of-type .price-cards {
-    padding-bottom: 59px;
+    padding-top: 7px;
 }
 
 #popular .img-cards {
@@ -358,6 +356,12 @@ button[type="submit"] {
     aspect-ratio: 137 / 144;
     border: 5px solid var(--main-color);
     border-radius: 20px 0px 0px 20px;
+}
+
+#popular .rank {
+    position: absolute;
+    left: 15px;
+    top: 120px;
 }
 
 
@@ -371,7 +375,7 @@ button[type="submit"] {
 }
 
 #leisure .title-cards {
-    padding: 20px 0px 21px 19px;
+    padding: 20px 36px 21px 19px;
 }
 
 #leisure .name-section {
@@ -388,11 +392,12 @@ button[type="submit"] {
     column-gap: 43px;
 }
 
-
 #leisure img {
     width: 302px;
     height: 389px;
     border-radius: 20px 20px 0px 0px;
+    border-bottom: 0;
+    margin-bottom: -5px;
 }
 
 #leisure li {
@@ -512,6 +517,7 @@ main {
     }
 
     #input input {
+        width: 253px;
         padding-left: 16px;
     }
 
@@ -565,6 +571,10 @@ main {
         padding: 0px 26px 9px 16px;
     }
 
+    #lodgings .img-cards {
+        margin-bottom: 0;
+    }
+
 
     /* RESPONSIVE #POPULAR TABLETTE */
 
@@ -600,11 +610,17 @@ main {
 
     #popular-cards .img-cards {
         max-width: 96px;
+        aspect-ratio: 106 / 144;
         border-radius: 20px 0px 0px 20px;
     }
 
     #popular-cards figcaption {
         padding: 12px 4px 12px 10px;
+    }
+
+    #popular .rank {
+        left: 10px;
+        top: 120px;
     }
 
 
@@ -623,12 +639,11 @@ main {
     }
 
     #leisure .title-cards {
+        box-sizing: border-box;
         display: flex;
-        align-content: center;
+        align-items: center;
         max-width: 182px;
-        max-height: 156px;
-        padding: 0;
-        /*padding: 20px 0px 21px 19px;*/
+        height: 56px;
     }
 
     #leisure .name-section {
