@@ -830,24 +830,14 @@ main {
         padding-left: 8.56px;
     }
 
+    #info i {
+        font-size: 12px;
+    }
+
 
 /*
-
-
-
-    #info {
-        padding: 38px 0px 39px 9px;
-    }
-
     #info p {
         display: inline;
-        padding-left: 11px;
-    }
-
-    #info i {
-        font-size: 10px;
-        padding: 7px 10px 7px 10px;
-        border: 1px solid #D9D9D9;
     }
 
     */
