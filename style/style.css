@@ -161,14 +161,17 @@ nav {
 }
 
 #desktop {
+    padding: 14px 16px 14px 16px;
+}
+
+.submit {
+    border: none;
+    border: 1px solid var(--alt-color);
+    border-radius: 0px 15px 15px 0px;
+    background-color: var(--alt-color);
     font-size: 18px;
     font-weight: 700;
     color: var(--main-color);
-    background-color: var(--alt-color);
-    border: none;
-    padding: 14px 16px 14px 16px;
-    border-radius: 0px 15px 15px 0px;
-    border: 1px solid var(--alt-color);
 }
 
 #mobile {
@@ -197,7 +200,7 @@ nav {
     font-style: normal;
     font-size: 18px;
     font-weight: 700;
-    padding: 14px 0px 0px 7px;
+    padding-top: 14px;
     margin-right: 37px;
 }
 
@@ -207,16 +210,16 @@ nav {
 
 #filters p {
     margin: 0;
-    padding-left: 12px;
+    padding-left: 7px;
 }
 
 .button-filter {
     background-color: var(--main-color);
     font-weight: 700;
     font-size: 17px;
-    padding: 14px 15px 16px 20px;
+    padding: 14px 20px 16px 20px;
     border: 2px solid #D9D9D9;
-    border-radius: 30px;
+    border-radius: 25px;
     margin-right: 46px;
 }
 
@@ -756,12 +759,16 @@ main {
         padding: 31px 21px 17px 20px;
     }
 
-    #input {
-        width: 332px;
-    }
-
     #p-title {
         padding: 13px 0px 36px 0px;
+    }
+
+    #input {
+        padding-left: 2px;
+    }
+
+    #input input {
+        width: 232px;
     }
 
     #desktop {
@@ -782,76 +789,51 @@ main {
         color: var(--main-color);
     }
 
-    
-
-    /*
-
-    button[type="submit"] {
-        font-size: 18px;
-        font-weight: 700;
-        background-color: var(--alt-color);
-        border: none;
-        padding: 14px 16px 14px 16px;
-        border-radius: 0px 15px 15px 0px;
-        border: 1px solid var(--alt-color);
-    }
-
-    #input input {
-        margin: 0;
-        padding: 14px 0px 14px 17px;
-        font-weight: 700;
-        width: 236px;
-        font-size: 18px;
-        border: 2px solid var(--secondary-color);
-    }
-
     #ping {
-        padding: 16px 18px 15px 18px;
-        background-color: var(--secondary-color);
-        border: 1px solid var(--secondary-color);
-        border-radius: 15px 0px 0px 15px;
-        margin: 0;
-        color: var(--text-color);
-    }
-
-    #filters em {
-        font-style: normal;
         font-size: 18px;
-        font-weight: 700;
-        padding: 14px 0px 0px 7px;
-        margin-right: 37px;
     }
 
     #filters {
-        padding-top: 32px;
+        padding-top: 34px;
     }
+
+    #filters em {
+        display: block;
+        min-width: 375px;
+        padding: 0px 0px 15px 0px;
+    }    
 
     #filters p {
         margin: 0;
-        padding-left: 12px;
+        padding: 0;
     }
-
+    
     .button-filter {
-        background-color: var(--main-color);
-        font-weight: 700;
-        font-size: 17px;
-        padding: 14px 15px 16px 20px;
-        border: 2px solid #D9D9D9;
-        border-radius: 30px;
-        margin-right: 46px;
-    }
-
-    .button-filter:hover {
-        background-color: var(--alt-secondary-color);
+        font-size: 11px;
+        padding: 19px 54px 18px 5px;
+        margin: 0;
     }
 
     .name-filter {
-        padding-left: 10px;
+        padding-left: 5px;
+    }
+
+    h1 {
+        padding-right: 57px;
+    }
+
+    #info {
+        padding: 43px 22px 17px 0px;
     }
 
     #shift {
-        padding-left: 14.56px;
+        padding-left: 8.56px;
     }
+
+
+/*
+
+
 
     #info {
         padding: 38px 0px 39px 9px;
