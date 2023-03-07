@@ -6,7 +6,6 @@
     --alt-color: #0065FC;
     --alt-secondary-color: #DEEBFF;
     --text-color: #000000;
-    --mobile-color: #F0F2F6;
 }  
 
 body {
@@ -408,6 +407,7 @@ nav {
     border-radius: 20px 20px 0px 0px;
     border-bottom: 0;
     margin-bottom: -5px;
+    object-fit: cover;
 }
 
 #leisure li {
@@ -707,6 +707,7 @@ main {
     header {
         padding: 0;
         display: block;
+        background-color: var(--main-color);
     }
 
     header figure {
@@ -755,12 +756,14 @@ main {
     main {
         max-width: 767px;
         min-width: 375px;
+        width: auto;
         padding-bottom: 0px;
-        display: block;
         margin: auto;
+        background-color: var(--main-color);
     }
 
     #search {
+        order: -1;
         max-width: 767px;
         box-sizing: border-box;
         padding: 31px 21px 34px 20px;
@@ -880,7 +883,7 @@ main {
     /* RESPONSIVE #POPULAR MOBILE */
 
     #popular {
-        order: 1;
+        order: -1;
         display: block;
         min-width: 375px;
         max-width: 767px;
@@ -920,7 +923,7 @@ main {
 
     #lodgings {
         order: 2;
-        background-color: var(--mobile-color);
+        background-color: var(--main-color);
         border-radius: 0;
         padding: 26px 20px 105px 20px;
         margin: 0;
@@ -975,7 +978,7 @@ main {
         min-width: 375px;
         max-height: none;
         box-sizing: border-box;
-        background-color: var(--mobile-color);
+        background-color: var(--main-color);
         margin: 0;
         padding: 0px 20px 80px 20px;
     }
@@ -1011,6 +1014,7 @@ main {
     
     #leisure li {
         min-width: 334px;
+        max-width: 727px;
     }
 
 
@@ -1029,23 +1033,4 @@ main {
         row-gap: 40px;
     }
 
-/*
-
-
-    .name-category {
-        padding-bottom: 8px;
-        font-weight: 700;
-        font-size: 18px;
-        margin: 0;
-    }
-
-    footer ul {
-        margin: 0;
-        padding: 0;
-    }
-
-    .category li {
-        padding-top: 12px;
-    }
-  */  
 }
