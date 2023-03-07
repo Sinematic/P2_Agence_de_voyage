@@ -751,12 +751,16 @@ main {
 
     main {
         box-sizing: border-box;
-        width: 100%;
+        max-width: 767px;
     }
 
     #search {
         max-width: 767px;
         padding: 31px 21px 17px 20px;
+    }
+     
+    h1 {
+        padding-right: 57px;
     }
 
     #p-title {
@@ -794,51 +798,149 @@ main {
     }
 
     #filters {
-        padding-top: 34px;
-    }
-
-    #filters em {
-        display: block;
-        min-width: 375px;
-        padding: 0px 0px 15px 0px;
-    }    
-
-    #filters p {
-        margin: 0;
         padding: 0;
     }
-    
+
     .button-filter {
         font-size: 11px;
-        padding: 19px 54px 18px 5px;
+        padding: 19px 0px 18px 13px;
         margin: 0;
+        display: flex;
+        justify-content: flex-start;
     }
 
     .name-filter {
         padding-left: 5px;
     }
 
-    h1 {
-        padding-right: 57px;
+    #shift {
+        padding-left: 8.56px;
+    }
+ 
+    #filters p {
+        padding: 34px 0px 0px 0px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 21fr 50fr 50fr;
+        grid-template-areas: 
+        "em em"
+        "money person"
+        "heart dog";
+        column-gap: 14px;
+        row-gap: 17px;
+    }
+
+    #filters em {
+        padding: 0;
+        margin: 0;
+        grid-area: em em;
+    }
+
+    #money {
+        grid-area: money;
+    }
+
+    #person {
+        grid-area: person;
+    }
+    
+    #heart {
+        grid-area: heart;
+    }
+
+    #dog {
+        grid-area: dog;
     }
 
     #info {
         padding: 43px 22px 17px 0px;
-    }
-
-    #shift {
-        padding-left: 8.56px;
+        display: grid;
+        grid-template-columns: 24px 1fr;
     }
 
     #info i {
         font-size: 12px;
+        height: fit-content;
+        width: fit-content; /* Ajouter desktop ?*/
     }
 
+    #info p {
+        min-width: 298px;
+        margin: 0;
+    }
+
+
+    /* RESPONSIVE #POPULAR MOBILE */
+
+    #lodgings, #leisure {
+        display: none;
+    }
+
+    #popular {
+        min-width: 375px;
+        max-width: 767px;
+        margin: 0;
+        border-radius: 0;
+        padding: 28px 21px 47px 20px;
+    }
+
+    #popular-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
 
 /*
-    #info p {
-        display: inline;
-    }
 
-    */
+#sub {
+    width: 100%;
+    padding-bottom: 26px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#popular-cards {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 33px;
+}
+
+#popular figure {
+    width: 100%;
+    max-height: 144px;
+    background-color: var(--main-color);
+    display: inline-flex;
+}
+
+#popular-cards .title-cards {
+    padding: 0px;
+    max-width: 169px;
+}
+
+#popular-cards figcaption {
+    position: relative;
+    max-width: 169px;
+    padding: 16px 22px 12px 15px;
+}
+
+#popular-cards .price-cards {
+    padding-top: 7px;
+}
+
+#popular .img-cards {
+    width: 39.95%;
+    aspect-ratio: 137 / 144;
+    border: 5px solid var(--main-color);
+    border-radius: 20px 0px 0px 20px;
+}
+
+#popular .rank {
+    position: absolute;
+    left: 15px;
+    top: 120px;
+}
+
+
+*/
+
 }
