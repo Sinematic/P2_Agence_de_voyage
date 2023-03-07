@@ -6,6 +6,7 @@
     --alt-color: #0065FC;
     --alt-secondary-color: #DEEBFF;
     --text-color: #000000;
+    --mobile-color: #F0F2F6;
 }  
 
 body {
@@ -282,7 +283,7 @@ nav {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 31px;
     row-gap: 30px;
-    padding: 0px;
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -750,13 +751,14 @@ main {
     /* RESPONSIVE #SEARCH MOBILE */
 
     main {
-        box-sizing: border-box;
         max-width: 767px;
+        min-width: 375px;
     }
 
     #search {
         max-width: 767px;
-        padding: 31px 21px 17px 20px;
+        box-sizing: border-box;
+        padding: 31px 21px 34px 20px;
     }
      
     h1 {
@@ -853,7 +855,7 @@ main {
     }
 
     #info {
-        padding: 43px 22px 17px 0px;
+        padding: 43px 22px 0px 0px;
         display: grid;
         grid-template-columns: 24px 1fr;
     }
@@ -872,75 +874,144 @@ main {
 
     /* RESPONSIVE #POPULAR MOBILE */
 
-    #lodgings, #leisure {
-        display: none;
-    }
-
     #popular {
+        order: 1;
+        display: block;
         min-width: 375px;
         max-width: 767px;
+        min-height: 580px;
         margin: 0;
         border-radius: 0;
-        padding: 28px 21px 47px 20px;
+        padding: 28px 21px 37px 20px;
+        background-color: var(--secondary-color);
     }
 
     #popular-cards {
         display: grid;
+        box-sizing: border-box;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
+        row-gap: 10px;
+    }
+
+    #popular .img-cards {
+        min-width: 127px;
+    }
+
+    #popular figure {
+        min-width: 334px;
+    }
+
+    #popular-cards .price-cards {
+        font-size: 14px;
+    }
+
+    #popular-cards figcaption {
+        padding: 16px 13px 12px 15px;
+    }
+    
+
+    /* RESPONSIVE #LODGINGS MOBILE */
+
+    #lodgings {
+        order: 2;
+        background-color: var(--mobile-color);
+        border-radius: 0;
+        padding: 26px 20px 105px 20px;
+        margin: 0;
+        max-width: 767px;
+        min-width: 375px;
+        max-height: none;
+    }
+
+    #lodgings .name-section {
+        padding-bottom: 19px;
+    }
+
+    #a-more {
+        display: none;
+    }
+
+    #lodgings ol {
+        min-width: 335px;
+        max-width: 767px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        row-gap: 12px;
+    }
+
+    #lodgings .title-cards {
+        padding: 4px 0px 9px 16px;
+    }
+
+    #lodgings .img-cards {
+        box-sizing: border-box;
+        min-width: 335px;
+        min-height: 114px;
+        margin-bottom: -5px;
+        aspect-ratio: 335 / 124;
+    }
+
+    #lodgings .cards {
+        box-sizing: border-box;
+        min-width: 335px;
+    }
+
+    #lodgings div {
+        width: fit-content;
+    }
+
+    /* RESPONSIVE #LEISURE MOBILE */
+
+    #leisure {
+        max-width: 767px;
+        max-height: none;
+        background-color: var(--mobile-color);
+        margin: 0;
+    }
+
+    #leisure .name-section {
+        width: 210px;
+        padding: 0px 141px 12px 22px;
+    }
+
+    #leisure .title-cards {
+        padding: 20px 68px 21px 19px;
     }
 
 /*
 
-#sub {
-    width: 100%;
-    padding-bottom: 26px;
-    display: flex;
-    justify-content: space-between;
-}
 
-#popular-cards {
+
+
+
+
+#leisure ul {
+    padding: 0;
+    margin: 0;
+    max-width: 1337px;
+    max-height: 445px;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 33px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 43px;
 }
 
-#popular figure {
-    width: 100%;
-    max-height: 144px;
-    background-color: var(--main-color);
-    display: inline-flex;
+#leisure img {
+    width: 302px;
+    height: 389px;
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 0;
+    margin-bottom: -5px;
 }
 
-#popular-cards .title-cards {
-    padding: 0px;
-    max-width: 169px;
+#leisure li {
+    margin: 0;
+    width: 302px;
 }
-
-#popular-cards figcaption {
-    position: relative;
-    max-width: 169px;
-    padding: 16px 22px 12px 15px;
-}
-
-#popular-cards .price-cards {
-    padding-top: 7px;
-}
-
-#popular .img-cards {
-    width: 39.95%;
-    aspect-ratio: 137 / 144;
-    border: 5px solid var(--main-color);
-    border-radius: 20px 0px 0px 20px;
-}
-
-#popular .rank {
-    position: absolute;
-    left: 15px;
-    top: 120px;
-}
-
-
 */
 
+    footer {
+        display: block;
+        order: 9;
+    }
 }
