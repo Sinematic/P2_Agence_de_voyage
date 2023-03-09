@@ -9,7 +9,7 @@
 }  
 
 body {
-    width: 1440px;
+    max-width: 1440px;
     margin: auto;
     background-color: var(--secondary-color);
     font-family: 'Raleway', sans-serif;
@@ -19,10 +19,14 @@ body {
 }
 
 #container {
-    padding: 0px 50px 0px 50px;
+    padding: 0px 3.47% 0px 3.47%;/* 50px */
     box-sizing: border-box;
     width: 100%;
     background-color: var(--main-color);
+}
+
+main {
+    margin-bottom: 61px;
 }
 
 
@@ -145,7 +149,6 @@ nav {
 /* SECTION #SEARCH */
 
 #search {
-    display: inline-block;
     width: 100%;
     background-color: var(--main-color);
     padding-left: 5px;
@@ -201,26 +204,29 @@ nav {
     font-size: 18px;
     font-weight: 700;
     padding-top: 14px;
-    margin-right: 37px;
 }
 
 #filters {
-    padding-top: 32px;
+    max-width: 914px;
+    padding: 32px 0px 0px 7px;
 }
 
 #filters p {
     margin: 0;
-    padding-left: 7px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 54px 90fr 70fr 85fr 113fr;
+    gap: 4%;
 }
 
 .button-filter {
     background-color: var(--main-color);
     font-weight: 700;
     font-size: 17px;
-    padding: 14px 20px 16px 20px;
+    height: fit-content;
+    padding: 14px 20px 16px 20px; /* 14px 20px 16px 20px; */
     border: 2px solid #D9D9D9;
     border-radius: 25px;
-    margin-right: 46px;
 }
 
 .button-filter:hover {
@@ -253,17 +259,25 @@ nav {
 
 /* SECTION #LODGINGS */
 
+#special {
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 40px;
+}
+
+#lodgings .cards {
+    height: 100%;
+}
+
 #lodgings, #popular {
     background-color: var(--secondary-color);
-    display: inline-block;
 }
 
 #lodgings {
+    width: 100%;
     max-width: 880px;
-    max-height: 626px;
-    margin-right: 40px;
     box-sizing: border-box;
-    padding: 42px 40px 46px 40px;
+    padding: 42px 4.5% 46px 4.5%;
 }
 
 #lodgings .name-section {
@@ -280,15 +294,11 @@ nav {
 #lodgings ol {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 31px;
-    row-gap: 30px;
+    column-gap: 3.48%; /* 31px */
+    row-gap: 3.375%; /* 30px */
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-#lodgings .cards {
-    height: fit-content;
 }
 
 #lodgings .title-cards {
@@ -305,24 +315,28 @@ nav {
 
 #lodgings .img-cards {
     box-sizing: border-box;
-    max-width: 246px;
-    max-height: 124px;
-    aspect-ratio: 123 / 62;
     width: 100%;
+    height: 100%;
+    aspect-ratio: 123 / 62;
+    object-fit: cover;
     border: 5px solid var(--main-color);
     border-radius: 20px 20px 0px 0px;
     margin-bottom: -5px;
-    object-fit: cover;
+}
+
+#lodgings figure, #lodgings figcaption {
+    width: 100%;
+    height: auto;
 }
 
 
 /* SECTION #POPULAR */
 
 #popular {
-    max-width: 420px;
-    max-height: 625px;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    padding: 41px 40px 34px 37px;
+    padding: 41px 9.3% 34px 8.6%; /* 40px 37px */
 }
 
 #sub {
@@ -335,34 +349,40 @@ nav {
 #popular-cards {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    row-gap: 33px;
+    row-gap: 5.28%; /* 33px */ 
 }
 
 #popular figure {
-    width: 100%;
     max-height: 144px;
+    width: 100%;
+    height: 100%;
     background-color: var(--main-color);
     display: inline-flex;
 }
 
 #popular-cards .title-cards {
-    padding: 0px;
+    padding: 0;
+    margin: 0;
     max-width: 169px;
+}
+
+figcaption, figure {
+    box-sizing: border-box;
 }
 
 #popular-cards figcaption {
     position: relative;
-    max-width: 169px;
-    padding: 16px 22px 12px 15px;
+    width: 100%;
+    padding: 4.45% 6% 0% 4.3%; /* 16px 22px 0px 15px */
 }
 
 #popular-cards .price-cards {
-    padding-top: 7px;
+    padding-top: 4.1%;
 }
 
 #popular .img-cards {
-    width: 39.95%;
-    aspect-ratio: 137 / 144;
+    width: 35.7%;
+    aspect-ratio: 123 / 144;
     border: 5px solid var(--main-color);
     border-radius: 20px 0px 0px 20px;
     object-fit: cover;
@@ -370,22 +390,23 @@ nav {
 
 #popular .rank {
     position: absolute;
-    left: 15px;
-    top: 120px;
+    left: 7.2%;
+    bottom: 8.3%;
 }
 
 
 /* SECTION #LEISURE */
 
 #leisure {
-    max-width: 1337px;
-    max-height: 493px;
+    width: 100%;
     background-color: var(--main-color);
-    margin-bottom: 60.51px;
 }
 
 #leisure .title-cards {
-    padding: 20px 36px 21px 19px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding-left: 19px;
 }
 
 #leisure .name-section {
@@ -395,25 +416,25 @@ nav {
 #leisure ul {
     padding: 0;
     margin: 0;
-    max-width: 1337px;
-    max-height: 445px;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 43px;
+    column-gap: 3.2%;
 }
 
 #leisure img {
-    width: 302px;
-    height: 389px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 302 / 389;
+    object-fit: cover;
     border-radius: 20px 20px 0px 0px;
     border-bottom: 0;
     margin-bottom: -5px;
-    object-fit: cover;
 }
 
 #leisure li {
     margin: 0;
-    width: 302px;
+    width: 100%;
 }
 
 
@@ -429,8 +450,8 @@ footer {
 
 #categories {    
     display: grid;
-    grid-template-columns: 193fr 166fr 114fr;
-    column-gap: 230px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 230px;/* 230px */
     width: fit-content;
 }
 
@@ -451,27 +472,6 @@ footer ul {
 }
 
 
-/* L'organisation de l'affichage du contenu pour le Desktop */
-
-main {
-    padding-bottom: 61px;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#lodgings {
-    order: 1;
-}
-
-#leisure {
-    order: 3;
-}
-
-#popular {
-    order: 1;
-}
-
-
 /* RESPONSIVE */
 
 @media screen and (max-width: 1024px) {
@@ -487,7 +487,7 @@ main {
     }
 
     main {
-        padding-bottom: 69px;
+        margin-bottom: 69px;
     }
 
 
@@ -558,31 +558,18 @@ main {
 
     /* RESPONSIVE #LODGINGS TABLETTE */
 
-    #lodgings {
-        margin: 0;
+    #special {
+        grid-template-columns: 12fr;
+        grid-template-rows: auto;
+        row-gap: 53px;
     }
 
     #more {
-        margin: 0;
-        padding: 40px 0px 46px 0px;
-    }
-
-    #lodgings .cards {
-        width: 246px;
-        display: flex;
-        margin: 0;
-    }
-
-    #lodgings figcaption {
-        width: 204px;
+        padding-top: 40px;
     }
 
     #lodgings .title-cards {
         padding: 0px 26px 9px 16px;
-    }
-
-    #lodgings .img-cards {
-        margin-bottom: 0;
     }
 
 
@@ -592,16 +579,14 @@ main {
         max-width: 880px;
         max-height: 278px;
         padding: 34px 40px 48px 40px;
-        margin: 53px 0px 70px 0px;
+        margin-bottom: 70px;
     }
 
     #sub {
-        max-width: 880px;
         padding: 0px 2px 26px 0px;
     }
 
     #popular-cards {
-        max-height: 144px;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 23px;
     }
@@ -619,7 +604,9 @@ main {
     }
 
     #popular-cards .img-cards {
-        max-width: 96px;
+        box-sizing: border-box;
+        width: 43%;
+        height: 100%;
         aspect-ratio: 106 / 144;
         border-radius: 20px 0px 0px 20px;
     }
@@ -630,30 +617,20 @@ main {
 
     #popular .rank {
         left: 10px;
-        top: 120px;
     }
 
 
     /* RESPONSIVE #LEISURE TABLETTE */
 
-    #leisure {
-        margin: 0;
-    }
 
     #leisure ul {
-        margin: 0;
         padding: 0px 1px 0px 1px;
-        max-width: 878px;
-        max-height: 267px;
-        column-gap: 50px;
+        column-gap: minmax(20px / 50px);
     }
 
     #leisure .title-cards {
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
+        padding-right: 7%;
         max-width: 182px;
-        height: 56px;
     }
 
     #leisure .name-section {
@@ -661,29 +638,15 @@ main {
     }
 
     #leisure img {
-        max-width: 182px;
-        max-height: 211px;
+        
         aspect-ratio: 182 / 211;
-    }
-
-    #leisure li {
-        max-width: 182px;
-        max-height: 267px;
     }
 
 
     /* RESPONSIVE FOOTER TABLETTE */
 
     #categories {
-        column-gap: 82px;
-    }
-
-    .category:first-of-type {
-        padding: 0;
-    }
-
-    .category:last-of-type {
-        padding-left: 0px;
+        column-gap: 15%;
     }
 
 }
@@ -692,7 +655,7 @@ main {
 
     body {
         width: 100%;
-        min-width: 375px;
+        min-width: 320px;
     }
     
     #container {
