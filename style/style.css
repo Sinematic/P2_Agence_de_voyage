@@ -308,6 +308,7 @@ nav {
     max-width: 246px;
     max-height: 124px;
     aspect-ratio: 123 / 62;
+    width: 100%;
     border: 5px solid var(--main-color);
     border-radius: 20px 20px 0px 0px;
     margin-bottom: -5px;
@@ -756,9 +757,9 @@ main {
     main {
         max-width: 767px;
         min-width: 375px;
-        width: auto;
+        width: 100%;
         padding-bottom: 0px;
-        margin: auto;
+        margin: 0;
         background-color: var(--main-color);
     }
 
@@ -881,6 +882,23 @@ main {
 
 
     /* RESPONSIVE #POPULAR MOBILE */
+
+    /* TESTS */
+    /*main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }*/
+/*
+    .img-cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        max-height: none;
+        height: auto;
+        width: 100%;
+    }*/
+    /* FIN TESTS */
 
     #popular {
         order: -1;
