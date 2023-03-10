@@ -92,7 +92,7 @@ i {
     color: var(--alt-color);
 }
 
-form {
+form, figure {
     margin: 0;
 }
 
@@ -711,12 +711,12 @@ footer ul {
 
     header {
         padding: 0;
+        width: 100%;
         display: block;
         background-color: var(--main-color);
     }
 
-    header .div-cards {
-        width: 100%;
+    header figure {
         display: flex;
         justify-content: center;
     }
