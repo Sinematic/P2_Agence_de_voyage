@@ -92,7 +92,7 @@ i {
     color: var(--alt-color);
 }
 
-figure, form {
+form {
     margin: 0;
 }
 
@@ -121,21 +121,22 @@ header {
 nav {
     height: auto;
     justify-content: space-between;
+    width: 381px;
 }
 
 #nav-ul {
     margin-top: auto;
     display: flex;
     justify-content: flex-end;
-    width: 381px;
     padding-left: 0px;
+    width: 100%;
 }
 
 .nav {
-    width: 50%;
+    width: fit-content;
     margin: 0;
     display: inline-block;
-    text-align: end;
+    text-align: center;
     font-weight: 500;
     padding: 46px 27px 0px 27px;
 }
@@ -330,7 +331,7 @@ nav {
     margin-bottom: -5px;
 }
 
-#lodgings figure, #lodgings figcaption {
+#lodgings .div-cards, #lodgings .img-details {
     width: 100%;
     height: auto;
 }
@@ -358,7 +359,7 @@ nav {
     row-gap: 5.28%; /* 33px */ 
 }
 
-#popular figure {
+#popular .div-cards {
     max-height: 144px;
     width: 100%;
     background-color: var(--main-color);
@@ -372,11 +373,11 @@ nav {
     max-width: 169px;
 }
 
-figcaption, figure {
+.img-details, .div-cards {
     box-sizing: border-box;
 }
 
-#popular-cards figcaption {
+#popular-cards .img-details {
     position: relative;
     width: 100%;
     padding: 4.45% 6% 0% 4.2%; /* 16px 22px 0px 15px */
@@ -510,13 +511,14 @@ footer ul {
         padding-top: 44px;
     }
 
-    #nav-ul {
+    nav {
         max-width: 243px;
     }
 
     .nav {
         width: 50%;
         padding: 48px 0px 0px 0px;
+        text-align: end;
     }
 
 
@@ -585,11 +587,11 @@ footer ul {
         padding: 0px 10.6% 6px 0px;
     }
 
-    #lodgings figure {
+    #lodgings .img-cards {
         aspect-ratio: 246 / 124;
     }
 
-    #lodgings figcaption {
+    #lodgings .img-details {
         aspect-ratio: 246 / 75;
         position: relative;
         padding-left: 6.5%;
@@ -629,7 +631,7 @@ footer ul {
         font-size: 13px;
     }
 
-    #popular figure {
+    #popular .div-cards {
         max-width: 252px;
         aspect-ratio: 252 / 144;
     }
@@ -642,7 +644,7 @@ footer ul {
         border-radius: 20px 0px 0px 20px;
     }
 
-    #popular-cards figcaption {
+    #popular-cards .img-details {
         padding: 5% 2% 0px 3.9%;
         aspect-ratio: 146 / 144;
     }
@@ -713,7 +715,7 @@ footer ul {
         background-color: var(--main-color);
     }
 
-    header figure {
+    header .div-cards {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -725,13 +727,14 @@ footer ul {
 
     nav {
         min-width: 320px;
+        max-width: 767px;
         width: 100%;
         justify-content: center;
     }
 
     #nav-ul {
         width: 100%;
-        max-width: 767px;
+        min-width: 320px;
         margin: 0;
     }
 
@@ -752,6 +755,33 @@ footer ul {
         color: var(--alt-color);
         border-bottom: 3px solid var(--alt-color);
     }
+
+    /*
+
+nav {
+    height: auto;
+    justify-content: space-between;
+    width: 381px;
+}
+
+#nav-ul {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.nav {
+    width: fit-content;
+    margin: 0;
+    display: inline-block;
+    text-align: center;
+    font-weight: 500;
+    padding: 46px 27px 0px 27px;
+}
+
+    */
 
 
     /* RESPONSIVE #SEARCH MOBILE */
@@ -926,7 +956,7 @@ footer ul {
         aspect-ratio: 137 / 144;
     }
 
-    #popular figure {
+    #popular .div-cards {
         min-width: 285px;
         max-width: 570px;
         width: 100%;
@@ -937,7 +967,7 @@ footer ul {
         font-size: 14px;
     }
 
-    #popular-cards figcaption {
+    #popular-cards .img-details {
         padding: 2.8% 13px 12px 4.49%;
     }
     
@@ -995,7 +1025,7 @@ footer ul {
         width: fit-content;
     }
 
-    #lodgings figcaption {
+    #lodgings .img-details {
         aspect-ratio: unset;
         height: 75px;
         padding-left: 16px;
@@ -1040,7 +1070,7 @@ footer ul {
         row-gap: 24px;
     }
 
-    #leisure figure, #leisure figcaption, #leisure img {
+    #leisure .div-cards, #leisure .img-details, #leisure img {
         width: 100%;
     }
 
