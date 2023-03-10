@@ -29,7 +29,6 @@ main {
     margin-bottom: 61px;
 }
 
-
 /* Des classes communes à certains éléments de la page */
 
 .rounded {
@@ -53,6 +52,7 @@ main {
     margin: 0;
     font-size: 16px;
     font-weight: 700;
+    font-family: 'Raleway', sans-serif;
     display: flex;
 }
 
@@ -184,6 +184,7 @@ nav {
 #input input {
     margin: 0;
     padding: 14px 0px 14px 17px;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     width: 236px;
     font-size: 18px;
@@ -203,6 +204,7 @@ nav {
     font-style: normal;
     font-size: 18px;
     font-weight: 700;
+    font-family: 'Raleway', sans-serif;
     padding-top: 14px;
 }
 
@@ -289,6 +291,7 @@ nav {
     padding-top: 40px;
     font-size: 18px;
     font-weight: 700;
+    font-family: 'Raleway', sans-serif;
 }
 
 #lodgings ol {
@@ -302,10 +305,12 @@ nav {
 }
 
 #lodgings .title-cards {
+    margin: 0;
     padding: 4px 0px 6px 16px;
 }
 
 #lodgings .price-cards {
+    margin: 0;
     padding-left: 16px;
 }
 
@@ -458,6 +463,7 @@ footer {
 
 .name-category {
     padding-bottom: 8px;
+    font-family: 'Raleway', sans-serif;
     font-weight: 700;
     font-size: 18px;
     margin: 0;
@@ -575,7 +581,7 @@ footer ul {
     }
 
     #lodgings .title-cards {
-        padding: 0px 10.6% 9px 0px;
+        padding: 0px 10.6% 6px 0px;
     }
 
     #lodgings figure {
@@ -653,7 +659,7 @@ footer ul {
 
     #leisure ul {
         padding: 0px 1px 0px 1px;
-        column-gap: minmax(20px / 50px);
+        column-gap: 5%;
     }
 
     #leisure .title-cards {
@@ -682,17 +688,17 @@ footer ul {
 
 }
 
-
 @media screen and (max-width: 767px) {
 
     body {
         width: 100%;
         min-width: 320px;
+        background-color: var(--main-color);
     }
     
     #container {
         padding: 0;
-        min-width: 375px;
+        min-width: 320px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -717,7 +723,7 @@ footer ul {
     }
 
     nav {
-        min-width: 375px;
+        min-width: 320px;
         width: 100%;
         justify-content: center;
     }
@@ -751,7 +757,6 @@ footer ul {
 
     main {
         max-width: 767px;
-        min-width: 375px;
         width: 100%;
         padding-bottom: 0px;
         margin: 0;
@@ -760,7 +765,9 @@ footer ul {
 
     #search {
         order: -1;
+        min-width: 320px;
         max-width: 767px;
+        width: 100%;
         box-sizing: border-box;
         padding: 31px 21px 34px 20px;
     }
@@ -778,7 +785,14 @@ footer ul {
     }
 
     #input input {
-        width: 232px;
+        width: 100%;
+        min-width: 176px;
+        max-width: 232px;
+        /* 232px */
+    }
+
+    #filters .button-filter:last-of-type {
+        margin-left: -2px;
     }
 
     #desktop {
@@ -826,7 +840,7 @@ footer ul {
     #filters p {
         padding: 34px 0px 0px 0px;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, minmax(138px, 165px));
         grid-template-rows: 21fr 50fr 50fr;
         grid-template-areas: 
         "em em"
@@ -867,40 +881,28 @@ footer ul {
     #info i {
         font-size: 12px;
         height: fit-content;
-        width: fit-content; /* Ajouter desktop ?*/
+        width: fit-content;
     }
 
     #info p {
-        min-width: 298px;
+        min-width: none;
         margin: 0;
     }
 
 
     /* RESPONSIVE #POPULAR MOBILE */
-
-    /* TESTS */
-    /*main {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }*/
-/*
-    .img-cards {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        max-height: none;
-        height: auto;
+    
+    #special {
         width: 100%;
-    }*/
-    /* FIN TESTS */
+    }
 
     #popular {
         order: -1;
         display: block;
-        min-width: 375px;
+        min-width: 320px;
         max-width: 767px;
-        min-height: 580px;
+        min-height: 494px;
+        max-height: 580px;
         margin: 0;
         border-radius: 0;
         padding: 28px 21px 37px 20px;
@@ -913,14 +915,21 @@ footer ul {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4, 1fr);
         row-gap: 10px;
+        place-items: center;
     }
 
     #popular .img-cards {
-        min-width: 127px;
+        min-width: 116.9px;
+        max-width: 233.8px;
+        width: 39%;
+        aspect-ratio: 137 / 144;
     }
 
     #popular figure {
-        min-width: 334px;
+        min-width: 285px;
+        max-width: 570px;
+        width: 100%;
+        aspect-ratio: 334 / 144;
     }
 
     #popular-cards .price-cards {
@@ -928,7 +937,7 @@ footer ul {
     }
 
     #popular-cards figcaption {
-        padding: 16px 13px 12px 15px;
+        padding: 2.8% 13px 12px 4.49%;
     }
     
 
@@ -941,7 +950,7 @@ footer ul {
         padding: 26px 20px 105px 20px;
         margin: 0;
         max-width: 767px;
-        min-width: 375px;
+        min-width: 320px;
         width: 100%;
         max-height: none;
     }
@@ -955,7 +964,7 @@ footer ul {
     }
 
     #lodgings ol {
-        min-width: 335px;
+        min-width: 286px;
         max-width: 767px;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
@@ -963,13 +972,14 @@ footer ul {
     }
 
     #lodgings .title-cards {
-        padding: 4px 0px 9px 16px;
+        padding: 4px 0px 6px 0px;
     }
 
     #lodgings .img-cards {
         box-sizing: border-box;
-        min-width: 335px;
+        width: 100%;
         min-height: 114px;
+        max-height: 201px;
         margin-bottom: -5px;
         aspect-ratio: 335 / 124;
         object-fit: cover;
@@ -977,18 +987,30 @@ footer ul {
 
     #lodgings .cards {
         box-sizing: border-box;
-        min-width: 335px;
+        width: 100%;
     }
 
     #lodgings div {
         width: fit-content;
     }
 
+    #lodgings figcaption {
+        aspect-ratio: unset;
+        height: 75px;
+        padding-left: 16px;
+    }
+
+    #lodgings .rank {
+        left: 16px;
+        bottom: 15%;
+    }
+
+
     /* RESPONSIVE #LEISURE MOBILE */
 
     #leisure {
         max-width: 767px;
-        min-width: 375px;
+        min-width: 320px;
         max-height: none;
         box-sizing: border-box;
         background-color: var(--main-color);
@@ -1002,13 +1024,13 @@ footer ul {
     }
 
     #leisure .title-cards {
-        min-width: 335px;
+        width: 100%;
         padding: 20px 0px 21px 19px;
     }
 
     #leisure ul {
         max-width: 727px;
-        min-width: 335px;
+        min-width: 285px;
         width: 100%;
         box-sizing: border-box;
         max-height: none;
@@ -1017,16 +1039,16 @@ footer ul {
         row-gap: 24px;
     }
 
+    #leisure figure, #leisure figcaption, #leisure img {
+        width: 100%;
+    }
+
     #leisure img {
-        min-width: 334px;
-        height: 134px;
-       /*aspect-ratio: 334 / 134;*/
-       object-fit: cover;
+       aspect-ratio: 334 / 134;
     }
     
-    
     #leisure li {
-        min-width: 334px;
+        min-width: 285px;
         max-width: 727px;
     }
 
@@ -1035,7 +1057,7 @@ footer ul {
     
     footer {
         box-sizing: border-box;
-        min-width: 375px;
+        min-width: 320px;
         max-width: 767px;
         padding: 45px 0px 61px 30px;
     }
@@ -1084,6 +1106,7 @@ footer ul {
 
     #lodgings .rank {
         font-size: 11px;
+        bottom: 9.5%;
     }
 }
 
